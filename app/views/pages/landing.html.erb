@@ -1,0 +1,442 @@
+<% content_for :title, "Браузер Идей - Находите прибыльные бизнес-идеи каждый день" %>
+
+<div class="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-sm">БИ</span>
+          </div>
+          <span class="text-xl font-bold text-slate-900">Браузер Идей</span>
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="#features" class="px-5 py-2.5 text-slate-600 hover:text-slate-900 transition-colors">Функции</a>
+          <a href="#pricing" class="px-5 py-2.5 text-slate-600 hover:text-slate-900 transition-colors">Цена</a>
+          <a href="#login" class="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-200">
+            Войти через Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <!-- Badge -->
+      <div class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-100 rounded-full mb-8">
+        <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <span class="text-sm font-medium text-blue-800">Уже 100+ подписчиков</span>
+      </div>
+      
+      <!-- Headline -->
+      <h1 class="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+        Находите прибыльные
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700">
+          бизнес-идеи
+        </span>
+        каждый день
+      </h1>
+      
+      <p class="text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+        Перестаньте тратить 10+ часов в неделю на поиск идей в Reddit и форумах. 
+        Получайте одну профессионально исследованную возможность ежедневно.
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
+        <a href="#subscribe" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-200 flex items-center space-x-2">
+          <span>Начать за 25,000₽/год</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+        <a href="#free-preview" class="px-8 py-4 bg-slate-100 text-slate-700 rounded-xl font-semibold hover:bg-slate-200 transition-all duration-200">
+          Посмотреть сегодняшнюю идею
+        </a>
+      </div>
+      
+      <!-- Social Proof -->
+      <div class="text-center">
+        <p class="text-sm text-slate-500 mb-4">Доверяют предприниматели из</p>
+        <div class="flex items-center justify-center space-x-6 text-slate-400">
+          <span class="font-medium">🇷🇺 Россия</span>
+          <span class="font-medium">🇺🇦 Украина</span>
+          <span class="font-medium">🇰🇿 Казахстан</span>
+          <span class="font-medium">🇵🇱 Польша</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Today's Idea Preview -->
+  <section id="free-preview" class="px-6 pb-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="relative">
+        <!-- Floating background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl transform rotate-1"></div>
+        
+        <!-- Card content -->
+        <div class="relative bg-white rounded-3xl shadow-xl p-8 border border-slate-200">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900">Идея дня: AI Резюме-Анализатор</h3>
+                <p class="text-slate-600">3 сентября 2025</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 bg-green-50 text-green-700 text-sm rounded-full font-medium">Бесплатно</span>
+          </div>
+          
+          <p class="text-lg text-slate-700 mb-6 leading-relaxed">
+            SaaS-платформа для автоматического анализа резюме с помощью ИИ, которая помогает HR-менеджерам быстрее находить подходящих кандидатов и составлять персонализированные вопросы для интервью.
+          </p>
+          
+          <!-- Preview metrics -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <p class="text-2xl font-bold text-blue-600">8/10</p>
+              <p class="text-sm text-slate-600">Размер рынка</p>
+            </div>
+            <div class="bg-amber-50 rounded-lg p-4 text-center">
+              <p class="text-2xl font-bold text-amber-600">6/10</p>
+              <p class="text-sm text-slate-600">Сложность</p>
+            </div>
+            <div class="bg-green-50 rounded-lg p-4 text-center">
+              <p class="text-2xl font-bold text-green-600">9/10</p>
+              <p class="text-sm text-slate-600">Боль клиентов</p>
+            </div>
+            <div class="bg-purple-50 rounded-lg p-4 text-center">
+              <p class="text-2xl font-bold text-purple-600">📈</p>
+              <p class="text-sm text-slate-600">Растущий тренд</p>
+            </div>
+          </div>
+          
+          <!-- Blur effect for premium content -->
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-t from-white to-transparent z-10"></div>
+            <div class="filter blur-sm">
+              <h4 class="text-lg font-semibold text-slate-900 mb-3">Детальный анализ</h4>
+              <p class="text-slate-600 mb-4">
+                Рынок HR-технологий растет на 15% в год. Основные конкуренты: HireVue ($500M), Workday ($60B), но большинство решений сложны и дороги для малого бизнеса...
+              </p>
+            </div>
+            
+            <!-- Unlock CTA -->
+            <div class="absolute inset-0 flex items-center justify-center z-20">
+              <a href="#subscribe" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200">
+                Открыть полный анализ
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="px-6 pb-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-slate-900 mb-4">
+          Всё что нужно для поиска <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700">следующей идеи</span>
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          Экономьте 40+ часов исследований в месяц и увеличивайте шансы найти прибыльную возможность
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-lg transition-all duration-200">
+          <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900 mb-3">Ежедневная подача</h3>
+          <p class="text-slate-600">Новая профессионально исследованная бизнес-идея каждый день в 9:00 по Москве</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-lg transition-all duration-200">
+          <div class="w-14 h-14 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900 mb-3">Глубокий анализ</h3>
+          <p class="text-slate-600">Google Trends, анализ конкуренции, размер рынка, MVP план и стратегия первых клиентов</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-lg transition-all duration-200">
+          <div class="w-14 h-14 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900 mb-3">Архив и экспорт</h3>
+          <p class="text-slate-600">365+ прошлых идей, поиск по категориям, экспорт в Notion/PDF</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-lg transition-all duration-200">
+          <div class="w-14 h-14 bg-gradient-to-br from-amber-100 to-amber-200 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900 mb-3">Оценка сложности</h3>
+          <p class="text-slate-600">Техническая сложность, боль клиентов и размер рынка по шкале 1-10</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-lg transition-all duration-200">
+          <div class="w-14 h-14 bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900 mb-3">Социальные доказательства</h3>
+          <p class="text-slate-600">Реальные треды Reddit, посты Twitter и форумы, показывающие спрос</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-lg transition-all duration-200">
+          <div class="w-14 h-14 bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900 mb-3">Telegram авторизация</h3>
+          <p class="text-slate-600">Быстрый вход через Telegram, никаких email-ов и паролей</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="px-6 py-20 bg-slate-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Что говорят пользователи</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-sm">АС</span>
+            </div>
+            <div class="ml-3">
+              <p class="font-semibold text-slate-900">Алексей С.</p>
+              <p class="text-sm text-slate-600">Разработчик, Москва</p>
+            </div>
+          </div>
+          <p class="text-slate-700 italic">
+            "Раньше тратил выходные на поиск идей. Теперь получаю готовый анализ каждое утро с кофе. За 2 месяца нашёл 3 перспективных направления."
+          </p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-sm">МП</span>
+            </div>
+            <div class="ml-3">
+              <p class="font-semibold text-slate-900">Мария П.</p>
+              <p class="text-sm text-slate-600">Дизайнер, СПб</p>
+            </div>
+          </div>
+          <p class="text-slate-700 italic">
+            "Качество исследований на уровне консалтинга. Google Trends данные и анализ конкурентов экономят кучу времени. Стоит каждого рубля."
+          </p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-sm">ДК</span>
+            </div>
+            <div class="ml-3">
+              <p class="font-semibold text-slate-900">Дмитрий К.</p>
+              <p class="text-sm text-slate-600">Инди-мейкер, Казань</p>
+            </div>
+          </div>
+          <p class="text-slate-700 italic">
+            "Уже запустил MVP по одной из идей. Пошли первые продажи! Архив с прошлыми идеями - золотая жила для поиска ниш."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="px-6 py-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">
+        Простая и честная <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700">цена</span>
+      </h2>
+      <p class="text-xl text-slate-600 mb-12">
+        Меньше 1$ за профессионально исследованную идею
+      </p>
+
+      <div class="relative">
+        <!-- Floating background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl transform -rotate-1"></div>
+        
+        <!-- Pricing card -->
+        <div class="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-slate-200">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-slate-900 mb-4">Годовая подписка</h3>
+            <div class="flex items-center justify-center mb-6">
+              <span class="text-5xl font-bold text-slate-900">25,000₽</span>
+              <span class="text-xl text-slate-600 ml-2">/год</span>
+            </div>
+            <p class="text-slate-600 mb-2">
+              Это всего <span class="font-semibold text-blue-600">68₽ в день</span>
+            </p>
+            <p class="text-sm text-slate-500">
+              При альтернативной стоимости 1,600$ в месяц = экономия 98%
+            </p>
+          </div>
+
+          <!-- Features -->
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-slate-700">365 идей в год (по одной каждый день)</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-slate-700">Полный анализ с Google Trends</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-slate-700">Архив всех прошлых идей</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-slate-700">Экспорт в Notion/PDF</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-slate-700">7 дней гарантии возврата</span>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <a href="#subscribe" class="block w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl font-semibold text-lg hover:shadow-xl transition-all duration-200 text-center">
+            Подписаться сейчас
+          </a>
+
+          <!-- Payment methods -->
+          <div class="mt-6 text-center">
+            <p class="text-sm text-slate-600 mb-2">Оплата:</p>
+            <div class="flex items-center justify-center space-x-4 text-slate-500">
+              <span class="text-sm">💳 Карты РФ</span>
+              <span class="text-sm">₿ Криpto</span>
+              <span class="text-sm">📱 ЮMoney</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Referral program -->
+      <div class="mt-12 p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl border border-amber-200">
+        <h4 class="font-semibold text-amber-900 mb-2">🎁 Реферальная программа</h4>
+        <p class="text-amber-800">
+          Приводите друзей и получайте <span class="font-semibold">20% скидку</span> на следующий год. 
+          Ваш друг тоже получит 20% скидку!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="px-6 py-20 bg-gradient-to-r from-blue-600 to-indigo-700">
+    <div class="max-w-4xl mx-auto text-center text-white">
+      <h2 class="text-4xl font-bold mb-6">
+        Готовы найти свою следующую прибыльную идею?
+      </h2>
+      <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+        Присоединяйтесь к сотням предпринимателей, которые экономят время и находят возможности с Браузером Идей
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+        <a href="#subscribe" class="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg hover:shadow-xl transition-all duration-200 flex items-center space-x-2">
+          <span>Начать за 25,000₽/год</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+        <a href="https://t.me/ideabrowser" class="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200">
+          Telegram канал
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-12 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-sm">БИ</span>
+            </div>
+            <span class="text-xl font-bold text-white">Браузер Идей</span>
+          </div>
+          <p class="text-slate-400 max-w-md">
+            Помогаем начинающим предпринимателям находить проверенные бизнес-идеи и экономить время на исследования.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-semibold mb-4">Продукт</h4>
+          <ul class="space-y-2">
+            <li><a href="#features" class="hover:text-white transition-colors">Функции</a></li>
+            <li><a href="#pricing" class="hover:text-white transition-colors">Цены</a></li>
+            <li><a href="#free-preview" class="hover:text-white transition-colors">Превью</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-semibold mb-4">Поддержка</h4>
+          <ul class="space-y-2">
+            <li><a href="mailto:support@ideabrowser.ru" class="hover:text-white transition-colors">Поддержка</a></li>
+            <li><a href="https://t.me/ideabrowser" class="hover:text-white transition-colors">Telegram</a></li>
+            <li><a href="/privacy" class="hover:text-white transition-colors">Политика</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-slate-800 mt-12 pt-8 text-center">
+        <p>&copy; 2025 Браузер Идей. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+</div>
