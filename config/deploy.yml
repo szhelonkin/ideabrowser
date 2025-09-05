@@ -73,6 +73,11 @@ volumes:
 # version inside the asset_path.
 asset_path: /rails/public/assets
 
+build:
+  context: .
+  dockerfile: ./Dockerfile
+
+  
 # Configure the image builder.
 builder:
   arch: amd64
