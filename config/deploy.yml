@@ -73,15 +73,13 @@ volumes:
 # version inside the asset_path.
 asset_path: /rails/public/assets
 
-build:
-  context: .
-  dockerfile: ./Dockerfile
 
-  
 # Configure the image builder.
 builder:
   arch: amd64
   driver: docker
+  dockerfile: ./Dockerfile  # ЯВНО укажи путь к Dockerfile
+  context: .                # и контекст сборки (каталог проекта)
 
   # # Build image via remote server (useful for faster amd64 builds on arm64 computers)
   # remote: ssh://docker@docker-builder-server
