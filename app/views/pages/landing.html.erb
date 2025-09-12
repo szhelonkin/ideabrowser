@@ -1,56 +1,67 @@
 <% content_for :title, "Найдите прибыльную бизнес-идею для российского рынка за 7 дней вместо 2 месяцев - Ideabrowser" %>
 
-<div class="min-h-screen bg-white">
+<div class="min-h-screen bg-white" data-controller="scroll-animation smooth-scroll parallax"
+     data-parallax-speed-value="0.3"
+     data-parallax-direction-value="up">
   <!-- Hero Section -->
   <section class="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/[0.05] via-transparent to-blue-600/[0.05] blur-3xl"></div>
 
     <!-- Floating Elements -->
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute left-[-10%] md:left-[-5%] top-[15%] md:top-[20%] w-[600px] h-[140px] transform rotate-12">
+    <div class="absolute inset-0 overflow-hidden parallax-container">
+      <div class="absolute left-[-10%] md:left-[-5%] top-[15%] md:top-[20%] w-[600px] h-[140px] transform rotate-12 float-animation"
+           data-parallax-target="element">
         <div class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/[0.15] to-transparent backdrop-blur-[2px] border-2 border-white/[0.15] shadow-[0_8px_32px_0_rgba(255,255,255,0.1)]"></div>
       </div>
       
-      <div class="absolute right-[-5%] md:right-[0%] top-[70%] md:top-[75%] w-[500px] h-[120px] transform -rotate-15">
+      <div class="absolute right-[-5%] md:right-[0%] top-[70%] md:top-[75%] w-[500px] h-[120px] transform -rotate-15 float-animation"
+           data-parallax-target="element">
         <div class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/[0.15] to-transparent backdrop-blur-[2px] border-2 border-white/[0.15] shadow-[0_8px_32px_0_rgba(255,255,255,0.1)]"></div>
       </div>
       
-      <div class="absolute left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%] w-[300px] h-[80px] transform -rotate-8">
+      <div class="absolute left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%] w-[300px] h-[80px] transform -rotate-8 float-animation"
+           data-parallax-target="element">
         <div class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-300/[0.15] to-transparent backdrop-blur-[2px] border-2 border-white/[0.15] shadow-[0_8px_32px_0_rgba(255,255,255,0.1)]"></div>
       </div>
     </div>
 
     <div class="relative z-10 container mx-auto px-4 md:px-6">
       <div class="max-w-4xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.1] border border-white/[0.2] mb-8 md:mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.1] border border-white/[0.2] mb-8 md:mb-12 fade-in"
+             data-scroll-animation-target="animate">
           <div class="h-2 w-2 bg-blue-400/80 rounded-full"></div>
           <span class="text-sm text-white/80 tracking-wide">AI-платформа для российских предпринимателей</span>
         </div>
 
-        <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 md:mb-8 tracking-tight text-white leading-tight">
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 md:mb-8 tracking-tight text-white leading-tight fade-up stagger-1"
+            data-scroll-animation-target="animate">
           Найдите прибыльную бизнес-идею для российского рынка 
           <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-blue-100">за 7 дней вместо 2 месяцев</span>
         </h1>
 
-        <p class="text-lg sm:text-xl text-white/70 mb-8 leading-relaxed max-w-3xl mx-auto">
+        <p class="text-lg sm:text-xl text-white/70 mb-8 leading-relaxed max-w-3xl mx-auto fade-up stagger-2"
+           data-scroll-animation-target="animate">
           AI-платформа, которая анализирует российские Telegram-каналы и группы ВКонтакте, 
           чтобы найти прибыльные ниши и готовые бизнес-идеи для вашего успеха
         </p>
 
-        <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
-          <a href="#pricing" class="inline-flex items-center px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-semibold text-lg shadow-lg transition-all duration-200">
+        <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12 fade-up stagger-3"
+             data-scroll-animation-target="animate">
+          <a href="#pricing" data-smooth-scroll-target="link"
+             class="inline-flex items-center px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-semibold text-lg shadow-lg transition-all duration-200 transform hover:scale-105">
             Получить доступ бесплатно на 7 дней
             <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </a>
-          <a href="#demo" class="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-semibold backdrop-blur-sm transition-all duration-200">
+          <a href="#demo" data-smooth-scroll-target="link"
+             class="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-semibold backdrop-blur-sm transition-all duration-200 transform hover:scale-105">
             Посмотреть демо
           </a>
         </div>
 
         <!-- Social Proof -->
-        <div class="text-center">
+        <div class="text-center fade-up stagger-4" data-scroll-animation-target="animate">
           <p class="text-sm text-white/60 mb-4">Доверяют предприниматели из</p>
           <div class="flex items-center justify-center space-x-6 text-white/70">
             <span class="font-medium">🇷🇺 Россия</span>
@@ -67,16 +78,19 @@
   <section class="py-16 md:py-24 bg-gray-50">
     <div class="container mx-auto px-4 md:px-6">
       <div class="max-w-4xl mx-auto text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 fade-up"
+            data-scroll-animation-target="animate">
           Знакомые проблемы при поиске бизнес-идей?
         </h2>
-        <p class="text-xl text-gray-600">
+        <p class="text-xl text-gray-600 fade-up stagger-1"
+           data-scroll-animation-target="animate">
           Большинство предпринимателей сталкиваются с этими вызовами
         </p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 scale-in stagger-1 transform hover:scale-105 transition-all duration-300"
+             data-scroll-animation-target="animate">
           <div class="mb-4">
             <svg class="h-8 w-8 text-red-500" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
@@ -86,7 +100,8 @@
           <p class="text-gray-600">Тратите время на просмотр Telegram и ВК без системного подхода</p>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 scale-in stagger-2 transform hover:scale-105 transition-all duration-300"
+             data-scroll-animation-target="animate">
           <div class="mb-4">
             <svg class="h-8 w-8 text-red-500" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12z" clip-rule="evenodd"/>
@@ -96,7 +111,8 @@
           <p class="text-gray-600">Не можете использовать Statista, SEMrush и другие аналитические сервисы</p>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 scale-in stagger-3 transform hover:scale-105 transition-all duration-300"
+             data-scroll-animation-target="animate">
           <div class="mb-4">
             <svg class="h-8 w-8 text-red-500" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 2C4.477 2 0 6.477 0 14s4.477 12 10 12 10-4.477 10-10S15.523 2 10 2zM8 12a1 1 0 100-2 1 1 0 000 2zm0 4a1 1 0 100-2 1 1 0 000 2zm4-4a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
@@ -106,7 +122,8 @@
           <p class="text-gray-600">Проводите исследования, но не понимаете реальный спрос</p>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 scale-in stagger-4 transform hover:scale-105 transition-all duration-300"
+             data-scroll-animation-target="animate">
           <div class="mb-4">
             <svg class="h-8 w-8 text-red-500" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3z" clip-rule="evenodd"/>
@@ -116,7 +133,8 @@
           <p class="text-gray-600">Собираете данные по крупицам из разных источников</p>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 scale-in stagger-5 transform hover:scale-105 transition-all duration-300"
+             data-scroll-animation-target="animate">
           <div class="mb-4">
             <svg class="h-8 w-8 text-red-500" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9 12a1 1 0 01-1-1V6a1 1 0 112 0v5a1 1 0 01-1 1zm0 4a1 1 0 100-2 1 1 0 000 2zM9 2C4.477 2 0 6.477 0 12s4.477 10 10 10 10-4.477 10-10S15.523 2 10 2z"/>
@@ -133,16 +151,19 @@
   <section class="py-16 md:py-24 bg-white">
     <div class="container mx-auto px-4 md:px-6">
       <div class="max-w-4xl mx-auto text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 fade-up"
+            data-scroll-animation-target="animate">
           Ideabrowser решает эти проблемы
         </h2>
-        <p class="text-xl text-gray-600">
+        <p class="text-xl text-gray-600 fade-up stagger-1"
+           data-scroll-animation-target="animate">
           Три ключевых преимущества нашей AI-платформы
         </p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="text-center p-8 rounded-xl bg-blue-50 border border-blue-100">
+        <div class="text-center p-8 rounded-xl bg-blue-50 border border-blue-100 slide-left stagger-1 transform hover:scale-105 transition-all duration-300"
+             data-scroll-animation-target="animate">
           <div class="flex justify-center mb-6">
             <svg class="h-12 w-12 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -157,7 +178,8 @@
           </div>
         </div>
 
-        <div class="text-center p-8 rounded-xl bg-blue-50 border border-blue-100">
+        <div class="text-center p-8 rounded-xl bg-blue-50 border border-blue-100 fade-up stagger-2 transform hover:scale-105 transition-all duration-300"
+             data-scroll-animation-target="animate">
           <div class="flex justify-center mb-6">
             <svg class="h-12 w-12 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
@@ -172,7 +194,8 @@
           </div>
         </div>
 
-        <div class="text-center p-8 rounded-xl bg-blue-50 border border-blue-100">
+        <div class="text-center p-8 rounded-xl bg-blue-50 border border-blue-100 slide-right stagger-3 transform hover:scale-105 transition-all duration-300"
+             data-scroll-animation-target="animate">
           <div class="flex justify-center mb-6">
             <svg class="h-12 w-12 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12z" clip-rule="evenodd"/>
@@ -195,13 +218,16 @@
     <div class="container mx-auto px-4 md:px-6">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 fade-up"
+              data-scroll-animation-target="animate">
             Идея дня: AI Резюме-Анализатор
           </h2>
-          <p class="text-xl text-gray-600">Пример того, что вы получите</p>
+          <p class="text-xl text-gray-600 fade-up stagger-1"
+             data-scroll-animation-target="animate">Пример того, что вы получите</p>
         </div>
 
-        <div class="relative">
+        <div class="relative scale-in"
+             data-scroll-animation-target="animate">
           <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl transform rotate-1"></div>
           
           <div class="relative bg-white rounded-3xl shadow-xl p-8 border border-gray-200">
@@ -268,17 +294,20 @@
   <section class="py-16 md:py-24 bg-white">
     <div class="container mx-auto px-4 md:px-6">
       <div class="max-w-4xl mx-auto text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 fade-up"
+            data-scroll-animation-target="animate">
           Истории успеха наших клиентов
         </h2>
-        <p class="text-xl text-gray-600">
+        <p class="text-xl text-gray-600 fade-up stagger-1"
+           data-scroll-animation-target="animate">
           Реальные результаты российских предпринимателей
         </p>
       </div>
       
       <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <!-- Testimonial 1 -->
-        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm scale-in stagger-1 transform hover:scale-105 transition-all duration-300"
+             data-scroll-animation-target="animate">
           <div class="flex justify-center mb-6">
             <div class="flex space-x-1">
               <svg class="h-5 w-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
@@ -316,7 +345,8 @@
         </div>
 
         <!-- Testimonial 2 -->
-        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm scale-in stagger-2 transform hover:scale-105 transition-all duration-300"
+             data-scroll-animation-target="animate">
           <div class="flex justify-center mb-6">
             <div class="flex space-x-1">
               <svg class="h-5 w-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
@@ -354,7 +384,8 @@
         </div>
 
         <!-- Testimonial 3 -->
-        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm scale-in stagger-3 transform hover:scale-105 transition-all duration-300"
+             data-scroll-animation-target="animate">
           <div class="flex justify-center mb-6">
             <div class="flex space-x-1">
               <svg class="h-5 w-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
@@ -397,16 +428,19 @@
   <!-- Pricing Section -->
   <section id="pricing" class="py-16 md:py-24 bg-gray-50">
     <div class="container mx-auto px-4 md:px-6 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 fade-up"
+          data-scroll-animation-target="animate">
         Выберите свой план
       </h2>
-      <p class="text-xl text-gray-600 mb-12">
+      <p class="text-xl text-gray-600 mb-12 fade-up stagger-1"
+         data-scroll-animation-target="animate">
         Начните с бесплатного периода на 7 дней
       </p>
 
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <!-- Starter Plan -->
-        <div class="relative bg-white rounded-3xl shadow-lg p-8 border border-gray-200">
+        <div class="relative bg-white rounded-3xl shadow-lg p-8 border border-gray-200 slide-left stagger-1 transform hover:scale-105 transition-all duration-300"
+             data-scroll-animation-target="animate">
           <div class="text-center mb-8">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">СТАРТЕР</h3>
             <div class="flex items-center justify-center mb-6">
@@ -458,7 +492,8 @@
         </div>
 
         <!-- Professional Plan -->
-        <div class="relative bg-white rounded-3xl shadow-2xl p-8 border-2 border-blue-500 scale-105">
+        <div class="relative bg-white rounded-3xl shadow-2xl p-8 border-2 border-blue-500 slide-right stagger-2 transform hover:scale-110 transition-all duration-300"
+             data-scroll-animation-target="animate" style="transform: scale(1.05);">
           <!-- Popular Badge -->
           <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
             <span class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
