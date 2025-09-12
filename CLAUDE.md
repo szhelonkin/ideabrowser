@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is "Ideabrowser" - a Rails 8.0 application with a modern frontend stack using Stimulus, Turbo, and TailwindCSS. The application appears to be in early development with a basic landing page controller and minimal routing.
+A Rails 8.0 application with a modern frontend stack using Stimulus, Turbo, and TailwindCSS. Currently in early development with a basic landing page controller and minimal routing.
 
 ## Technology Stack
 
@@ -69,6 +69,14 @@ bin/rails tailwindcss:build  # Build TailwindCSS for production
 - `db/` - Database schema files for cache, queue, and cable schemas
 - `bin/` - Executable scripts for development tasks (setup, dev, rails, rubocop, brakeman, etc.)
 
+### Application Architecture
+- Single controller architecture with PagesController handling landing page
+- Stimulus controllers for interactive JavaScript functionality
+- Turbo for SPA-like navigation and form submissions
+- TailwindCSS 4.x with both tailwindcss-ruby and tailwindcss-rails gems for comprehensive styling
+- Importmap-based JavaScript module management (no Node.js/webpack required)
+- Modern Rails 8 conventions with autoload_lib enabled
+
 ### Key Configurations
 - Uses Rails 8.0 defaults with autoload_lib configuration
 - Solid Cache/Queue/Cable replace Redis for simpler deployment
@@ -91,11 +99,12 @@ The GitHub Actions workflow includes:
 
 ## Development Notes
 
-- This appears to be a fresh Rails 8 application with minimal customization
-- No additional authentication, authorization, or complex business logic yet implemented
-- PWA capabilities are available but not currently active (routes commented out)
+- Fresh Rails 8 application with minimal customization
+- No authentication, authorization, or complex business logic implemented yet
+- PWA capabilities available but currently inactive (routes commented out in config/routes.rb)
 - Docker deployment ready with Kamal configuration
 - Uses modern Rails 8 features like Solid* gems instead of Redis dependencies
+- Development server runs via `bin/dev` which starts both Rails server and TailwindCSS watcher
 
 ## Important Instructions
 
@@ -106,3 +115,9 @@ Follow the coding conventions already established in this Rails application:
 - Use Turbo for SPA-like navigation without full page refreshes
 - Prefer Importmap over Node.js/npm for JavaScript dependency management
 - Utilize the Solid* gems (Cache, Queue, Cable) for background processing instead of Redis
+
+# important-instruction-reminders
+Do what has been asked; nothing more, nothing less.
+NEVER create files unless they're absolutely necessary for achieving your goal.
+ALWAYS prefer editing an existing file to creating a new one.
+NEVER proactively create documentation files (*.md) or README files. Only create documentation files if explicitly requested by the User.
