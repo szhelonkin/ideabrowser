@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Ideabrowser" %></title>
+    <title><%= content_for(:title) || "Ideabrowser - Найдите прибыльную бизнес-идею" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -10,20 +10,52 @@
 
     <%= yield :head %>
 
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <main class="w-full">
+    <!-- Flash Messages -->
+    <% if notice %>
+      <div data-controller="flash" data-flash-type-value="notice" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
+        <%= notice %>
+      </div>
+    <% end %>
+    
+    <% if alert %>
+      <div data-controller="flash" data-flash-type-value="alert" class="fixed top-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
+        <%= alert %>
+      </div>
+    <% end %>
+    
+    <!-- Navigation -->
+    <% if user_signed_in? %>
+      <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="container mx-auto px-4">
+          <div class="flex justify-between items-center h-16">
+            <div class="flex items-center space-x-2">
+              <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center">
+                <span class="text-white font-bold text-sm">ИБ</span>
+              </div>
+              <%= link_to "Ideabrowser", root_path, class: "text-xl font-bold text-gray-900" %>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <span class="text-gray-700">Привет, <%= current_user.name_for_display %>!</span>
+              <%= link_to "Выйти", logout_path, method: :delete, 
+                         class: "text-gray-600 hover:text-gray-900", 
+                         data: { turbo_method: :delete } %>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <% end %>
+
+    <main class="<%= user_signed_in? ? 'pt-16' : '' %> w-full">
       <%= yield %>
     </main>
   </body>

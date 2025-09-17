@@ -1,0 +1,82 @@
+<% content_for :title, "Панель управления - Ideabrowser" %>
+
+<div class="container mx-auto px-4 py-8">
+  <div class="bg-white rounded-lg shadow p-6">
+    <h1 class="text-2xl font-bold text-gray-900 mb-4">
+      Добро пожаловать в Ideabrowser!
+    </h1>
+    
+    <div class="bg-blue-50 border border-blue-200 rounded-md p-4 mb-6">
+      <p class="text-blue-800">
+        Привет, <strong><%= current_user.name_for_display %></strong>! 
+        Вы успешно вошли в систему.
+      </p>
+      <p class="text-blue-700 text-sm mt-2">
+        Email: <%= current_user.email %>
+        <% if current_user.verified? %>
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 ml-2">
+            ✓ Подтвержден
+          </span>
+        <% else %>
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 ml-2">
+            ! Не подтвержден
+          </span>
+        <% end %>
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-gray-50 rounded-lg p-4">
+        <h3 class="font-semibold text-gray-900 mb-2">Статус аккаунта</h3>
+        <p class="text-sm text-gray-600">
+          <% if current_user.subscription_plan.present? %>
+            План: <span class="capitalize"><%= current_user.subscription_plan %></span>
+          <% else %>
+            Базовый план
+          <% end %>
+        </p>
+        <% if current_user.subscription_expires_at.present? %>
+          <p class="text-sm text-gray-600">
+            Действует до: <%= current_user.subscription_expires_at.strftime("%d.%m.%Y") %>
+          </p>
+        <% end %>
+      </div>
+
+      <div class="bg-gray-50 rounded-lg p-4">
+        <h3 class="font-semibold text-gray-900 mb-2">Последний вход</h3>
+        <p class="text-sm text-gray-600">
+          <% if current_user.last_login_at.present? %>
+            <%= current_user.last_login_at.strftime("%d.%m.%Y в %H:%M") %>
+          <% else %>
+            Первый вход
+          <% end %>
+        </p>
+      </div>
+
+      <div class="bg-gray-50 rounded-lg p-4">
+        <h3 class="font-semibold text-gray-900 mb-2">Безопасность</h3>
+        <p class="text-sm text-gray-600">
+          Email подтвержден: 
+          <% if current_user.verified? %>
+            <span class="text-green-600">Да</span>
+          <% else %>
+            <span class="text-red-600">Нет</span>
+          <% end %>
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center">
+      <p class="text-gray-600 mb-4">
+        Здесь будет ваш личный кабинет с бизнес-идеями и аналитикой.
+      </p>
+      <div class="space-x-4">
+        <%= link_to "На главную", root_path, 
+                   class: "inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50" %>
+        <%= link_to "Выйти", logout_path, method: :delete, 
+                   class: "inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700",
+                   data: { turbo_method: :delete, confirm: "Вы уверены?" } %>
+      </div>
+    </div>
+  </div>
+</div>

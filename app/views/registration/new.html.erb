@@ -1,0 +1,87 @@
+<% content_for :title, "Регистрация - Ideabrowser" %>
+
+<div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="flex justify-center">
+      <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center">
+        <span class="text-white font-bold text-lg">ИБ</span>
+      </div>
+    </div>
+    <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+      Создайте аккаунт
+    </h2>
+    <p class="mt-2 text-center text-sm text-gray-600">
+      Уже есть аккаунт?
+      <%= link_to "Войти", login_path, 
+                  class: "font-medium text-blue-600 hover:text-blue-500" %>
+    </p>
+  </div>
+
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+      <%= form_with model: @user, url: register_path, local: true,
+                    data: { controller: "registration-form" },
+                    class: "space-y-6" do |form| %>
+        
+        <% if @user.errors.any? %>
+          <div class="bg-red-50 border border-red-200 rounded-md p-4">
+            <div class="flex">
+              <div class="ml-3">
+                <h3 class="text-sm font-medium text-red-800">
+                  Исправьте следующие ошибки:
+                </h3>
+                <div class="mt-2 text-sm text-red-700">
+                  <ul role="list" class="list-disc space-y-1 pl-5">
+                    <% @user.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <div>
+          <%= form.label :email, "Email", 
+                        class: "block text-sm font-medium leading-6 text-gray-900" %>
+          <div class="mt-2">
+            <%= form.email_field :email, 
+                               class: "block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6",
+                               required: true,
+                               autocomplete: "email" %>
+          </div>
+        </div>
+
+        <div>
+          <%= form.label :password, "Пароль", 
+                        class: "block text-sm font-medium leading-6 text-gray-900" %>
+          <div class="mt-2">
+            <%= form.password_field :password, 
+                                  class: "block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6",
+                                  required: true,
+                                  autocomplete: "new-password",
+                                  minlength: 8 %>
+            <p class="mt-1 text-sm text-gray-600">Минимум 8 символов</p>
+          </div>
+        </div>
+
+        <div>
+          <%= form.label :password_confirmation, "Подтверждение пароля", 
+                        class: "block text-sm font-medium leading-6 text-gray-900" %>
+          <div class="mt-2">
+            <%= form.password_field :password_confirmation, 
+                                  class: "block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6",
+                                  required: true,
+                                  autocomplete: "new-password" %>
+          </div>
+        </div>
+
+        <div>
+          <%= form.submit "Создать аккаунт", 
+                         class: "flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
