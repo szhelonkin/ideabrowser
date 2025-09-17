@@ -32,8 +32,8 @@
       </div>
     <% end %>
     
-    <!-- Navigation -->
-    <% if user_signed_in? %>
+    <!-- Navigation (hidden on landing page) -->
+    <% if user_signed_in? && controller_name != 'pages' %>
       <nav class="bg-white shadow-sm border-b border-gray-200">
         <div class="container mx-auto px-4">
           <div class="flex justify-between items-center h-16">
@@ -46,6 +46,7 @@
             
             <div class="flex items-center space-x-4">
               <span class="text-gray-700">Привет, <%= current_user.name_for_display %>!</span>
+              <%= link_to "На главную", root_path, class: "text-blue-600 hover:text-blue-900" %>
               <%= link_to "Выйти", logout_path, method: :delete, 
                          class: "text-gray-600 hover:text-gray-900", 
                          data: { turbo_method: :delete } %>
@@ -55,7 +56,7 @@
       </nav>
     <% end %>
 
-    <main class="<%= user_signed_in? ? 'pt-16' : '' %> w-full">
+    <main class="<%= user_signed_in? && controller_name != 'pages' ? 'pt-16' : '' %> w-full">
       <%= yield %>
     </main>
   </body>

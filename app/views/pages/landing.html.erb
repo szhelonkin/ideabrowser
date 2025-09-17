@@ -4,18 +4,72 @@
      data-parallax-speed-value="0.3"
      data-parallax-direction-value="up">
   
-  <!-- Quick Authentication Links (for testing) -->
-  <% unless user_signed_in? %>
-    <div class="fixed top-4 right-4 z-50 flex space-x-2">
-      <%= link_to "Вход", login_path, 
-                  class: "px-4 py-2 bg-white/10 backdrop-blur-sm text-white rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200 text-sm" %>
-      <%= link_to "Регистрация", register_path, 
-                  class: "px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-200 text-sm" %>
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20 transition-all duration-300" 
+       data-controller="mobile-menu navbar" 
+       data-navbar-target="navbar">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-sm">ИБ</span>
+          </div>
+          <span class="text-xl font-bold text-white transition-colors duration-300" data-navbar-target="logo">Ideabrowser</span>
+        </div>
+        
+        <!-- Navigation Links -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#demo" data-smooth-scroll-target="link" data-navbar-target="links" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Демо</a>
+          <a href="#pricing" data-smooth-scroll-target="link" data-navbar-target="links" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Цены</a>
+        </div>
+        
+        <!-- Authentication Links -->
+        <% unless user_signed_in? %>
+          <div class="flex items-center space-x-3">
+            <%= link_to "Вход", login_path, 
+                        data: { navbar_target: "authLinks" },
+                        class: "px-4 py-2 text-white/80 hover:text-white transition-colors text-sm font-medium" %>
+            <%= link_to "Регистрация", register_path, 
+                        class: "px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-all duration-200 text-sm font-semibold" %>
+          </div>
+        <% else %>
+          <div class="flex items-center space-x-3">
+            <span class="text-white/80 text-sm transition-colors duration-300" data-navbar-target="userGreeting">Привет, <%= current_user.name_for_display %>!</span>
+            <%= link_to "Панель", dashboard_path, 
+                        class: "px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-all duration-200 text-sm font-semibold" %>
+          </div>
+        <% end %>
+        
+        <!-- Mobile menu button -->
+        <button class="md:hidden text-white p-2" data-action="click->mobile-menu#toggle">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Mobile menu -->
+      <div class="md:hidden bg-white/10 backdrop-blur-md border-t border-white/20 hidden" data-mobile-menu-target="menu">
+        <div class="px-4 py-4 space-y-3">
+          <a href="#demo" data-smooth-scroll-target="link" data-navbar-target="links" class="block text-white/80 hover:text-white transition-colors text-sm font-medium">Демо</a>
+          <a href="#pricing" data-smooth-scroll-target="link" data-navbar-target="links" class="block text-white/80 hover:text-white transition-colors text-sm font-medium">Цены</a>
+          <% unless user_signed_in? %>
+            <div class="pt-3 border-t border-white/20 space-y-3">
+              <%= link_to "Вход", login_path, 
+                          data: { navbar_target: "authLinks" },
+                          class: "block text-white/80 hover:text-white transition-colors text-sm font-medium" %>
+              <%= link_to "Регистрация", register_path, 
+                          class: "block px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-all duration-200 text-sm font-semibold text-center" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
-  <% end %>
+  </nav>
   
   <!-- Hero Section -->
-  <section class="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
+  <section class="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 pt-16">
     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/[0.05] via-transparent to-blue-600/[0.05] blur-3xl"></div>
 
     <!-- Floating Elements -->
@@ -38,7 +92,7 @@
 
     <div class="relative z-10 container mx-auto px-4 md:px-6">
       <div class="max-w-4xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.1] border border-white/[0.2] mb-8 md:mb-12 fade-in"
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.1] border border-white/[0.2] mb-8 md:mb-12 mt-12 md:mt-16 fade-in"
              data-scroll-animation-target="animate">
           <div class="h-2 w-2 bg-blue-400/80 rounded-full"></div>
           <span class="text-sm text-white/80 tracking-wide">AI-платформа для российских предпринимателей</span>
