@@ -11,7 +11,7 @@ class RegistrationController < ApplicationController
     @user = User.new(registration_params)
     
     if @user.save
-      AuthMailer.email_verification(@user).deliver_later
+      AuthMailer.email_verification(@user).deliver_now
       flash[:notice] = "Регистрация прошла успешно! Проверьте email для подтверждения аккаунта."
       redirect_to login_path
     else
@@ -40,7 +40,7 @@ class RegistrationController < ApplicationController
     
     if @user && !@user.verified?
       @user.generate_verification_token!
-      AuthMailer.email_verification(@user).deliver_later
+      AuthMailer.email_verification(@user).deliver_now
       flash[:notice] = "Письмо с подтверждением отправлено повторно"
     else
       flash[:alert] = "Пользователь не найден или уже подтвержден"

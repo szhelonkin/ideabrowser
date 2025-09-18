@@ -52,7 +52,7 @@ class AuthController < ApplicationController
     
     if @user
       @user.generate_password_reset_token!
-      AuthMailer.password_reset(@user).deliver_later
+      AuthMailer.password_reset(@user).deliver_now
       flash[:notice] = "Инструкции по восстановлению пароля отправлены на #{@user.email}"
       redirect_to login_path
     else
