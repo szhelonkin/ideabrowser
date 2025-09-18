@@ -61,8 +61,6 @@ group :development do
   # Load environment variables from .env file
   gem "dotenv-rails"
   
-  # Resend email service
-  gem "resend"
 end
 
 group :test do
@@ -74,3 +72,6 @@ end
 gem "tailwindcss-ruby", "~> 4.1"
 
 gem "tailwindcss-rails", "~> 4.3"
+
+# Resend email service
+gem "resend"
